@@ -27,8 +27,8 @@ io.on('connection', socket => {
 
         const otherUser = rooms[roomID].find(id => id !== socket.id)
         if (otherUser) {
-            socket.emit('other user', otherUser)
-            socket.to(otherUser).emit('user joined', socket.id)
+            socket.emit('other-user', otherUser)
+            socket.to(otherUser).emit('user-joined', socket.id)
         }
 
 
