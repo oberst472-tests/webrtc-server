@@ -9,7 +9,9 @@ const options = {
 };
 const io = require('socket.io')(server, options);
 
-
+app.get('/', (req, res) => {
+    res.send('hello')
+})
 
 const rooms = {}
 
